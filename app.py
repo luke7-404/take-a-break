@@ -4,7 +4,7 @@ import datetime
 import time
 
 notif = ToastNotifier() # Create toaster notifier object
-intervalTime = 5 # Variable that dictates the baseline notification interval
+intervalTime = 60 # Variable that dictates the baseline notification interval
 prev_time = datetime.datetime.now() # Get the current time
 
 # The next alert time (iterval time with NO offset)
