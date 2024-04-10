@@ -9,8 +9,7 @@ To change the break time delay (the time in between cycles) access the line with
 ## Benchmarking the ``app.py`` script:
 There is a file in this repo that allows for the ``app.py`` script to be benchmarked. On my machine, the results I get are:
 
-``CPU Usage: 0.0%``
-``Memory Usage: 1.65234375 MB``
+``CPU Usage: 0.0%`` <br>``Memory Usage: 1.65234375 MB``</br>
 
 I encourage that before having the ``app.py`` script run on you machine, it is benchmarked before
 
