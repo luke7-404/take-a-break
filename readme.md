@@ -1,5 +1,5 @@
 # Take A Break Python Script
-This project is for window users to have a pomodoro-like notification system. This script currently is <ins>**only**</ins> developed for windows users. The libaries used in ``app.py`` are ``win10toast``, ``datetime``, and ``time``. 
+This project is for window users to have a pomodoro-like notification system. This script currently is <ins>**only**</ins> developed for windows users. The libaries used in ``app.py`` are ``plyer``, ``datetime``, and ``time``. 
 
 ### How to edit the script:
 To change the interval time (the amount of working time) access the ``intervalTime`` variable; the units are in minutes
@@ -9,7 +9,7 @@ To change the break time delay (the time in between cycles) access the line with
 ## Benchmarking the ``app.py`` script:
 There is a file in this repo that allows for the ``app.py`` script to be benchmarked. On my machine, the results I get are:
 
-``CPU Usage: 0.0%`` <br>``Memory Usage: 1.65234375 MB``</br>
+``CPU Usage: 0.0%`` <br>``Memory Usage: 1.6640625 MB``</br>
 
 I encourage that before having the ``app.py`` script run on you machine, it is benchmarked before
 

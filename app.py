@@ -1,9 +1,9 @@
 # Libaries
-from win10toast import ToastNotifier
+import plyer.platforms.win.notification
+from plyer import notification
 import datetime
 import time
 
-notif = ToastNotifier() # Create toaster notifier object
 intervalTime = 60 # Variable that dictates the baseline notification interval
 prev_time = datetime.datetime.now() # Get the current time
 
@@ -11,7 +11,8 @@ prev_time = datetime.datetime.now() # Get the current time
 next_alert_time = prev_time + datetime.timedelta(minutes=intervalTime) 
 
 # Print the time that the program started before the loop
-print(f"Start time: {prev_time}")
+#print(f"Start time: {prev_time}")
+notification.notify(f"Program Started at {prev_time}", f"{intervalTime} minutes has been set, counting down now", timeout=10)
 
 # Enter an infinite loop
 while True:
@@ -22,8 +23,8 @@ while True:
     if tnow >= next_alert_time:
         
         # Post notifications 
-        print(f"{intervalTime} minutes have passed.")
-        notif.show_toast("Take A break", f"{intervalTime} minutes have passed", icon_path=None, duration=30, threaded=True)
+        #print(f"{intervalTime} minutes have passed.")
+        notification.notify("Take A break", f"{intervalTime} minutes have passed", timeout=30)
         
         # Update times
         prev_time = tnow
@@ -35,7 +36,7 @@ while True:
         time.sleep(900)
         
         # After delay, alert the start of the next cycle
-        print("New Cycle Started")
-        notif.show_toast("New Cycle Started", f"Another {intervalTime} minutes has been set", icon_path=None, duration=10, threaded=True)
+        #print("New Cycle Started")
+        notification.notify("New Cycle Started", f"Another {intervalTime} minutes has been set", timeout=10)
 
     time.sleep(60)  # Check every minute
